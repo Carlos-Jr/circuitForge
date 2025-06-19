@@ -1,0 +1,55 @@
+// Benchmark "b01_C" written by ABC on Thu Oct  5 16:36:41 2017
+
+module b01_C ( 
+    pi0, pi1, pi2, pi3, pi4, pi5, pi6,
+    po0, po1, po2, po3, po4, po5, po6 );
+  input  pi0, pi1, pi2, pi3, pi4, pi5, pi6;
+  output po0, po1, po2, po3, po4, po5, po6;
+  wire n15, n16, n17, n18, n19, n20, n21, n22, n24, n25, n26, n27, n28, n29,
+    n30, n31, n32, n34, n35, n37, n38, n39, n40, n41, n42, n43, n44, n45,
+    n46, n48, n49, n50, n51, n52, n53;
+  assign n15 = ~pi0 & ~pi1;
+  assign n16 = ~pi5 & n15;
+  assign n17 = ~pi4 & ~n16;
+  assign n18 = pi3 & n17;
+  assign n19 = pi0 & pi1;
+  assign n20 = pi4 & ~pi5;
+  assign n21 = ~n19 & ~n20;
+  assign n22 = ~pi3 & ~n21;
+  assign po2 = n18 | n22;
+  assign n24 = ~pi5 & ~n15;
+  assign n25 = pi4 & n15;
+  assign n26 = ~n24 & ~n25;
+  assign n27 = pi3 & n26;
+  assign n28 = ~pi4 & ~n19;
+  assign n29 = pi5 & n28;
+  assign n30 = pi3 & ~n19;
+  assign n31 = n20 & ~n30;
+  assign n32 = ~n27 & ~n29;
+  assign po3 = n31 | ~n32;
+  assign n34 = n19 & n20;
+  assign n35 = ~pi3 & pi4;
+  assign po6 = pi5 & n35;
+  assign n37 = ~n19 & po6;
+  assign n38 = ~n15 & ~n20;
+  assign n39 = pi3 & n38;
+  assign n40 = ~pi5 & n19;
+  assign n41 = pi5 & ~n19;
+  assign n42 = ~n40 & ~n41;
+  assign n43 = ~pi4 & n42;
+  assign n44 = ~pi3 & n43;
+  assign n45 = ~n34 & ~n37;
+  assign n46 = ~n39 & n45;
+  assign po4 = n44 | ~n46;
+  assign n48 = ~pi0 & pi1;
+  assign n49 = pi0 & ~pi1;
+  assign n50 = ~n48 & ~n49;
+  assign n51 = pi3 & ~n20;
+  assign n52 = ~n50 & ~n51;
+  assign n53 = n50 & n51;
+  assign po5 = n52 | n53;
+  assign po0 = pi6;
+  assign po1 = pi2;
+endmodule
+
+
